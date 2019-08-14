@@ -26,8 +26,8 @@ TSS2_RC Tss2_Sys_ReadClock_Prepare(
         return rval;
 
     ctx->decryptAllowed = 0;
-    ctx->encryptAllowed = 0;
-    ctx->authAllowed = 0;
+    ctx->encryptAllowed = 1;
+    ctx->authAllowed = 1;
 
     return CommonPrepareEpilogue(ctx);
 }
